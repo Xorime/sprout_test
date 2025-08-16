@@ -54,7 +54,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'sprout_test',
         theme: ThemeData(
-          primaryColor: kColorPrimaryBlue,
+          primaryColor: kColorPrimaryRed,
           scaffoldBackgroundColor: kColorSoftBlue,
           textTheme: GoogleFonts.poppinsTextTheme(
             const TextTheme(
@@ -71,7 +71,7 @@ class MainApp extends StatelessWidget {
             ),
           ),
           colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: MaterialColor(0xFF00B9CC, Utils.getSwatch(kColorPrimaryBlue)),
+            primarySwatch: MaterialColor(0xFFee1515, Utils.getSwatch(kColorPrimaryRed)),
             brightness: Brightness.dark,
           ).copyWith(surface: kColorSoftBlue),
         ),

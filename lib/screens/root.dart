@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sprout_test/controllers/root_controller.dart';
+import 'package:sprout_test/screens/pokedex.dart';
 import 'package:sprout_test/utils/constants.dart';
 import 'package:sprout_test/utils/extensions.dart';
 
@@ -21,9 +22,8 @@ class _RootState extends State<Root> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller.screens = [
-      //TODO input screens
-      // NowPlayingsprout_test(),
-      // FavouriteList(),
+      Pokedex(),
+      Container(),
     ];
     _controller.tabController = TabController(
       initialIndex: _controller.index.value,
@@ -55,7 +55,7 @@ class _RootState extends State<Root> with TickerProviderStateMixin {
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
               child: BottomAppBar(
-                color: kColorPrimaryBlue,
+                color: kColorPrimaryRed.withValues(alpha: 0.8),
                 height: kSizeBottomBarHeight,
                 elevation: 0.0,
                 child: SafeArea(

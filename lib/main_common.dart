@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:sprout_test/app.dart';
 import 'package:sprout_test/utils/constants.dart';
 
@@ -62,5 +61,4 @@ Future<void> setupInitializers(Environment flavor) async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await GetStorage.init();
-  await dotenv.load(fileName: flavor == Environment.development ? ".dev.env" : ".env");
 }

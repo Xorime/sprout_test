@@ -9,6 +9,8 @@ const kColorCoolGray = Color(0xFFB0BEC5);
 const kColorSoftBlue = Color(0xFFE0F7FA);
 const kColorMintGreen = Color(0xFF00E5A0);
 
+const kColorPrimaryRed = Color(0xFFee1515);
+
 // Padding
 const kPadding8 = 8.0;
 const kPadding12 = 12.0;
@@ -34,6 +36,7 @@ const button = TextStyle(fontSize: 13.6, color: kColorDarkTeal);
 
 //Images
 const kImageDevFlag = 'assets/dev-flag.png';
+const kImagePokeball = 'assets/pokeball.png';
 
 const kPopupSuccess = 'success';
 const kPopupFailed = 'failed';

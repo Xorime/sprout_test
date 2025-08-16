@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sprout_test/app.dart';
+import 'package:sprout_test/main_common.dart';
 
-void main() {
-  runApp(const MyApp());
+main() async {
+  mainCommon(Environment.production);
 }
 
 class MyApp extends StatelessWidget {
