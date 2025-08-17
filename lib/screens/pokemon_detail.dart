@@ -34,6 +34,15 @@ class PokemonDetail extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
+            actions: [
+              IconButton(
+                onPressed: () => _controller.onTapFavourite(),
+                icon: Icon(
+                  Icons.star_border,
+                  color: _controller.isFavourite.value ? Colors.yellow : null,
+                ),
+              ),
+            ],
             forceMaterialTransparency: true,
             title: Text(
               '',

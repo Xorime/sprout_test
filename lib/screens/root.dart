@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sprout_test/controllers/root_controller.dart';
+import 'package:sprout_test/screens/favourite_pokemon.dart';
 import 'package:sprout_test/screens/pokedex.dart';
 import 'package:sprout_test/utils/constants.dart';
 import 'package:sprout_test/utils/extensions.dart';
@@ -23,9 +24,7 @@ class _RootState extends State<Root> with TickerProviderStateMixin {
     super.initState();
     _controller.screens = [
       Pokedex(),
-      Center(
-        child: Text('Coming Soon'),
-      ),
+      FavouritePokemon(),
     ];
     _controller.tabController = TabController(
       initialIndex: _controller.index.value,
