@@ -11,4 +11,10 @@ class Api extends BaseApi {
         controller: controllers,
         debug: true,
       );
+
+  Future<void> getPokedexDetail({required BaseControllers controllers, required String url}) => apiFetch(
+        url: url,
+        controller: controllers,
+        debug: false,
+      );
 }

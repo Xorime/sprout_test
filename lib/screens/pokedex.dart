@@ -39,26 +39,29 @@ class Pokedex extends StatelessWidget {
               itemBuilder: (context, index) {
                 PokedexModel model = _controller.arrData[index];
 
-                return Container(
-                  padding: EdgeInsets.symmetric(vertical: kPadding12, horizontal: kPadding12),
-                  margin: EdgeInsets.symmetric(vertical: kPadding8),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        model.name,
-                        style: context.workSans(fontSize: 16, fontWeight: FontWeight.w500),
-                      ),
-                      Image.asset(
-                        kImagePokeball,
-                        width: 40,
-                        height: 40,
-                      ),
-                    ],
+                return GestureDetector(
+                  onTap: () => _controller.onTapPokedex(model: model),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: kPadding12, horizontal: kPadding12),
+                    margin: EdgeInsets.symmetric(vertical: kPadding8),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          model.name,
+                          style: context.workSans(fontSize: 16, fontWeight: FontWeight.w500),
+                        ),
+                        Image.asset(
+                          kImagePokeball,
+                          width: 40,
+                          height: 40,
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sprout_test/base/base_controllers.dart';
+import 'package:sprout_test/screens/pokedex_detail.dart';
 import 'package:sprout_test/utils/utils.dart';
 
 class PokedexController extends BaseControllers {
@@ -75,6 +76,10 @@ class PokedexController extends BaseControllers {
 
   void _parsePagination(String? next) {
     nextUrl = next;
+  }
+
+  void onTapPokedex({required PokedexModel model}) {
+    Get.to(() => PokedexDetail(url: model.url));
   }
 }
 
