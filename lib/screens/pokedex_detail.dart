@@ -41,7 +41,14 @@ class PokedexDetail extends StatelessWidget {
 
   Widget _body(BuildContext context) {
     if (_controller.state.value == ControllerState.loading) {
-      return Wgt.loaderBox();
+      return Column(
+        children: [
+          for (int i = 0; i < 10; i++) ...[
+            Wgt.loaderBox(width: Get.width),
+            SizedBox(height: kPadding12),
+          ],
+        ],
+      );
     }
 
     return RefreshIndicator(

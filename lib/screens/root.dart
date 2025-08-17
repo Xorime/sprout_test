@@ -23,7 +23,9 @@ class _RootState extends State<Root> with TickerProviderStateMixin {
     super.initState();
     _controller.screens = [
       Pokedex(),
-      Container(),
+      Center(
+        child: Text('Coming Soon'),
+      ),
     ];
     _controller.tabController = TabController(
       initialIndex: _controller.index.value,
@@ -64,7 +66,7 @@ class _RootState extends State<Root> with TickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       _tab(
-                        name: 'Now Playing',
+                        name: 'Pokedex',
                         icon: Icons.home_outlined,
                         index: 0,
                         context: context,

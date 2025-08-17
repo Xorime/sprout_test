@@ -23,9 +23,7 @@ class PokemonDetailController extends BaseControllers {
   Future<void> load() async {
     super.load();
 
-    print(url);
     int pokemonID = int.parse(url.split('/pokemon-species/')[1].split('/')[0]);
-
     await api.getPokemonDetail(controllers: this, pokemonID: pokemonID);
   }
 

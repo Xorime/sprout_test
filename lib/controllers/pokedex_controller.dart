@@ -71,7 +71,6 @@ class PokedexController extends BaseControllers {
       PokedexModel model = PokedexModel.fromJson(json);
       arrData.add(model);
     }
-    print(arrData.length);
   }
 
   void _parsePagination(String? next) {
