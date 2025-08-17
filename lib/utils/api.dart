@@ -9,11 +9,17 @@ class Api extends BaseApi {
   Future<void> getPokedexList({required BaseControllers controllers, String? nextUrl}) => apiFetch(
         url: nextUrl != null ? nextUrl : _getPokedexList,
         controller: controllers,
-        debug: true,
+        debug: false,
       );
 
   Future<void> getPokedexDetail({required BaseControllers controllers, required String url}) => apiFetch(
         url: url,
+        controller: controllers,
+        debug: false,
+      );
+
+  Future<void> getPokemonDetail({required BaseControllers controllers, required int pokemonID}) => apiFetch(
+        url: baseUrl + 'pokemon/$pokemonID',
         controller: controllers,
         debug: false,
       );

@@ -1,12 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:sprout_test/base/base_controllers.dart';
 import 'package:sprout_test/utils/constants.dart';
-// import 'package:sprout_test/utils/keys.dart';
 
 class RootController extends BaseControllers {
   RxBool isLoggedIn = false.obs;
@@ -17,23 +14,7 @@ class RootController extends BaseControllers {
   @override
   void onInit() {
     super.onInit();
-    // checkForToken();
   }
-
-  // Future<void> checkForToken() async {
-  //   String token = await GetStorage().read(storageToken) ?? '';
-
-  //   if (token != '') {
-  //     isLoggedIn.value = true;
-  //   }
-  // }
-
-  // Future<void> onTapLogin() async {
-  //   String? token = dotenv.env['ACCESS_TOKEN'];
-
-  //   isLoggedIn.value = true;
-  //   await GetStorage().write(storageToken, token);
-  // }
 
   Future<bool> handleBack() async {
     if (tabController.index != 0) {

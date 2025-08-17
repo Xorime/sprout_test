@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:sprout_test/base/base_controllers.dart';
 import 'package:sprout_test/models/pokedex_detail_model.dart';
+import 'package:sprout_test/screens/pokemon_detail.dart';
 import 'package:sprout_test/utils/utils.dart';
 
 class PokedexDetailController extends BaseControllers {
@@ -40,5 +41,7 @@ class PokedexDetailController extends BaseControllers {
     model.value = PokedexDetailModel.fromJson(json);
   }
 
-  void onTapPokedex({required PokemonEntries model}) {}
+  void onTapPokedex({required PokemonEntries model}) {
+    Get.to(() => PokemonDetail(url: model.pokemonSpecies?.url ?? ''));
+  }
 }

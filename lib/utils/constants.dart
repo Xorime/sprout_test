@@ -11,6 +11,25 @@ const kColorMintGreen = Color(0xFF00E5A0);
 
 const kColorPrimaryRed = Color(0xFFee1515);
 
+const kColorElementalNormal = Color(0xFFA8A77A);
+const kColorElementalFire = Color(0xFFEE8130);
+const kColorElementalWater = Color(0xFF6390F0);
+const kColorElementalElectric = Color(0xFFF7D02C);
+const kColorElementalGrass = Color(0xFF7AC74C);
+const kColorElementalIce = Color(0xFF96D9D6);
+const kColorElementalFighting = Color(0xFFC22E28);
+const kColorElementalPoison = Color(0xFFA33EA1);
+const kColorElementalGround = Color(0xFFE2BF65);
+const kColorElementalFlying = Color(0xFFA98FF3);
+const kColorElementalPsychic = Color(0xFFF95587);
+const kColorElementalBug = Color(0xFFA6B91A);
+const kColorElementalRock = Color(0xFFB6A136);
+const kColorElementalGhost = Color(0xFF735797);
+const kColorElementalDragon = Color(0xFF6F35FC);
+const kColorElementalDark = Color(0xFF705746);
+const kColorElementalSteel = Color(0xFFB7B7CE);
+const kColorElementalFairy = Color(0xFFD685AD);
+
 // Padding
 const kPadding8 = 8.0;
 const kPadding12 = 12.0;
@@ -37,6 +56,7 @@ const button = TextStyle(fontSize: 13.6, color: kColorDarkTeal);
 //Images
 const kImageDevFlag = 'assets/dev-flag.png';
 const kImagePokeball = 'assets/pokeball.png';
+const kImageSword = 'assets/swords.png';
 
 const kPopupSuccess = 'success';
 const kPopupFailed = 'failed';
